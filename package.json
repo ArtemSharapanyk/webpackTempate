@@ -1,0 +1,38 @@
+{
+  "name": "webpacktemplate",
+  "version": "1.0.0",
+  "description": "My template",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
+    "build": "webpack --config ./build/webpack.build.conf.js"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "author": "https://github.com/ArtemSharapanyk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtemSharapanyk/webpackTemplate"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.4.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
+    "webpack-merge": "^4.2.2"
+  }
+}
