@@ -13,11 +13,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       errors: true
     }
   },
-  plugins: [
-    new webpack.SourceMapDevToolPlugin({
-      filename: "[file].map"
-    })
-  ]
+  plugins: []
 });
 
 module.exports = new Promise((resolve, reject) => {

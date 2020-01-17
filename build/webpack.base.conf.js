@@ -81,11 +81,6 @@ module.exports = {
           template: `${PAGES_DIR}/${page}`,
           filename: `./${page}`
         }),
-        new HtmlWebpackPlugin({
-          template: `${PAGES_DIR}/about.html}`,
-          filename: `./about.html`
-        })
-        
-    )
+      )
   ]
 };
