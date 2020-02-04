@@ -1,5 +1,4 @@
 const path = require("path");
-const fs = require("fs");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -14,16 +13,13 @@ const PATHS = {
 
 
 const PAGES_DIR = `${PATHS.src}/pages`;
-const PAGES = fs
-  .readdirSync(PAGES_DIR)
-  .filter(fileName => fileName.endsWith(".html"));
 
 module.exports = {
   externals: {
     paths: PATHS
   },
   entry: {
-    app: PATHS.src
+    app: PATHS.src,
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
@@ -33,7 +29,6 @@ module.exports = {
   module: {
     rules: [
       {
-        
         test: /\.js$/,
         loader: "babel-loader",
         exclude: "/node_modules/"
@@ -75,12 +70,11 @@ module.exports = {
       }
     ]),
     
-    ...PAGES.map(
-      page =>
-        new HtmlWebpackPlugin({
-          template: `${PAGES_DIR}/${page}`,
-          filename: `./${page}`
-        }),
-      )
+    
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/index.html`,
+      filename: `./index.html`,
+      chunks: [ 'app' ]
+    }),
   ]
 };

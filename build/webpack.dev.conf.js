@@ -2,9 +2,9 @@ const webpack = require("webpack");
 const merge = require("webpack-merge");
 const baseWebpackConfig = require("./webpack.base.conf");
 
+
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: "development",
-  devtool: "cheap-module-eval-source-map",
   devServer: {
     contentBase: baseWebpackConfig.externals.paths.dist,
     port: 8081,
@@ -13,7 +13,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       errors: true
     }
   },
-  plugins: []
+  plugins: [
+
+  ]
 });
 
 module.exports = new Promise((resolve, reject) => {
