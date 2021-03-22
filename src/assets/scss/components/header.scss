@@ -1,0 +1,296 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header, nav {
+    .logo{
+        display: flex;
+        img{
+            width: 125px;
+            height: auto;
+        }
+    }
+}
+
+header{
+    position: absolute;
+    top: 0;
+    background-position: center;
+    left: 0;
+    width: 100%;
+    min-height: 110vh;
+    background-color: $dark;
+    color: $white;
+    transform: translateX(0);
+    transition: .2s ease-in;
+    z-index: 1000;
+
+    &.activeMenu{
+        transform: translateX(-30%);
+    }
+
+    .darkBg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .3);
+        opacity: 0;
+        transition: .2s ease-in;
+        transition-delay: .3s;
+        z-index: 0;
+        
+        &.activeMenu{
+            opacity: 1;
+            z-index: 100;
+        }
+    }
+
+    .topLine{
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+
+        .menuBtn{
+            position: absolute;
+            right: 0;
+            font-size: .4rem;
+            top:25px;
+            cursor: pointer;
+            z-index: 100;
+
+            .hamburger{
+                .hamburger-box{
+                    width: 30px;
+                }
+
+                .hamburger-box .hamburger-inner,.hamburger-box .hamburger-inner::after,.hamburger-box .hamburger-inner::before  {
+                    background-color: #fff;
+                    border-radius: 0;
+                    height: 2px;
+                    width: 30px;
+                }
+            }
+        }
+            
+        .phoneNumber{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include addFont($type: Montserrat, $weight: 700);
+            cursor: pointer;
+            z-index: 10;
+
+            a{
+                font-size: .5rem;
+                color: $white;
+                margin-left: 5px;
+            }
+
+            i{
+                font-size: .4rem;
+                color: $grey-decorated;
+            }
+        }
+    }
+
+    .socialNetworksAndMenuBar{
+        width: 5%;
+        min-width: 60px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-left: 1px solid $grey-decorated;
+        min-height: 110vh;
+        height: 100%;
+        padding-top: 40px;
+
+        .socialGroup{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 60px;
+            width: 5vw;
+            margin: 0;
+            padding: 0;
+            
+            li{
+                width: 38px;
+                height: 38px;
+                margin-top: 30px;
+            
+                &:first-child{
+                    margin-top: 0;
+                }
+
+                a{
+                    color: #2c2c2c;
+                    font-size: .4rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items:center;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(255,255,255,.2);
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: .3s ease-in;
+                    
+                    &:hover{
+                        background-color: rgba(255,255,255,.4);
+                    }
+                }
+            }
+        }
+    }
+
+    .container{
+        width: 50%;
+        height: 110vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 10%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;  
+    }
+
+    .descriptionText{
+        font-size: .5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        .btn{
+            background-color: $active-color;
+            font-size: .6em;
+            margin-top: 30px;
+
+            &:hover{
+                background-color: lighten($color: $active-color, $amount: 10%);
+            }
+
+            &::after{
+                background-color:rgba(0, 0, 0, .3);
+            }
+        }
+
+        span, p{
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .greeting{
+            
+            .line{
+                height: 1px;
+                display: block;
+                background-color: $white;
+                width: 22%;
+            }
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p{
+                font-size: .7em;
+            }
+        }
+
+        span{
+            font-size: .7em;
+        }
+
+        h1{
+            font-weight: 300;
+            font-size: 3em;
+            letter-spacing: 2px;
+            margin-top: 15px;
+            margin-bottom: 35px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid $white;
+        }
+
+        span.place{
+            font-size: .9em;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+
+            i{
+                color: $grey-decorated;
+                font-size: .7em;
+
+                &:first-child{
+                    margin-right: 10px;
+                }
+
+                &:last-child{
+                    margin-left: 10px;
+                }
+            }
+        }
+        .aboutService{
+            font-size: .750em;
+            font-weight: light;
+            line-height: 1.75;
+        }
+    }
+
+    .buttomLine{
+        height: 10vh;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid $grey-decorated;
+        font-size: .4rem;
+
+        .wrapper{
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        ul{
+            display: flex;
+            justify-content: space-around;
+            align-items:center;
+            width: 100%;
+            margin: 0;
+            height: 100%;
+            padding: 0;
+
+            li{
+                &:last-child{
+                   pointer-events: none;
+                }
+            }
+
+            a{
+                display: flex;
+                align-items: center;
+
+
+                i{
+                    margin-right: 10px;
+                    color: $grey-decorated;
+                }
+            }
+        }
+    }
+}

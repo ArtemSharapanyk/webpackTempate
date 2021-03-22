@@ -1,12 +1,476 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Webpack Template</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    dgg
+    <header style="background-image: url('/assets/img/top-bg.jpg');">
+      <div class="darkBg"></div>
+      <div class="wrapper">
+        <div class="topLine">
+          <a href="/" class="logo">
+            <img src="/assets/img/logo-1.svg" alt="Салон красоты S&Mitler">
+          </a>
+          <div class="phoneNumber hidden">
+            <i class="fa fa-mobile" aria-hidden="true"></i>
+            <a href="tel:+7(495)118-94-35" >
+              +7 (495) 118-94-35
+            </a>
+          </div>
+          <div class="menuBtn">
+            <div class="hamburger hamburger--emphatic">
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="descriptionText">
+            <div class="greeting">
+              <span class="line"></span>
+              <p>
+                  добро пожаловать в профессиональный
+              </p>
+              <span class="line"></span>
+            </div>
+            <h1>
+              салон красоты
+            </h1>
+            <span class="place">
+              <i class="fa fa-star"></i>
+              в москве
+              <i class="fa fa-star"></i>
+            </span>
+            <div class="aboutService">
+              <strong>S&Mitler</strong> – это салон красоты бизнес-класса. Мастера салона дарят посетителям уверенность в себе и индивидуальный стиль. Здесь представлены все самые востребованные услуги бьюти-индустрии.
+            </div>
+            <div class="btnBox">
+              <div class="btn">
+                о салоне 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="socialNetworksAndMenuBar">
+          <ul class="socialGroup">
+            <li>
+              <a href="https://www.facebook.com/" target="_blank">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank">
+                <i class="fa fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://vk.com/feed" target="_blank">
+                <i class="fa fa-vk"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="buttomLine info ">
+        <div class="wrapper">
+          <ul>
+            <li>
+              <a href="https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%98%D0%B2%D0%B0%D0%BD%D0%B0+%D0%91%D0%B0%D0%B1%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0,+22%D0%90,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%A0%D1%83%D1%81%D0%B8%D1%8F,+117292/data=!4m2!3m1!1s0x46b54ceb6ceb84d3:0x20f0b0590111b3f6?sa=X&ved=2ahUKEwiGjNur2KrvAhUqlIsKHUT1AsMQ8gEwAHoECAMQAQ&hl=uk" target="_blank">
+                <i class="fa fa-location-arrow"></i>
+                г. Москва, ул. Ивана Бабушкина, 22с1
+              </a>
+            </li>
+            <li>
+              <a href="tel:+7(495)118-94-35">
+                <i class="fa fa-mobile"></i>
+                +7 (495) 922-77-73
+              </a>
+            </li>
+            <li class="hidden">
+              <a href="#" >
+                <i class="fa fa-clock-o"></i>
+                Время работы: ежедневно, 10:00 - 22:00
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    
+    <nav>
+      <div class="logo">
+        <img src="/assets/img/logo-1.svg" alt="Салон красоты S&Mitler">
+      </div>
+      <ul class="menu">
+        <li>
+          <a href="#">Косметологический сервис</a>
+        </li>
+        <li>
+          <a href="#">Маникюрный сервис</a>
+        </li>
+        <li>
+          <a href="#">Массаж и SPA</a>
+        </li>
+        <li>
+          <a href="#">Солярий</a></li>
+        <li>
+          <a href="#">Наши специалисты</a>
+        </li>
+        <li>
+          <a href="#">Новости</a>
+        </li>
+        <li>
+          <a href="#">Прайс-лист</a>
+        </li>
+        <li>
+          <a href="#">Наши сертификаты</a>
+        </li>
+        <li>
+          <a href="#">О салоне</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="sServices slider">
+
+      <div class="uiBtns">
+        <a class="sliderBtn sliderBtnLeft ">
+          <i class="fa fa-angle-double-left"></i>
+        </a>
+        <a class="sliderBtn sliderBtnRight">
+          <i class="fa fa-angle-double-right"></i>
+        </a>
+      </div>
+
+      <ul class="sliders">
+        <li class="slide reverse">
+          <div class="page" style="background: url('/assets/img/service.png');">
+            <div class="cover"></div>
+          </div>
+          <div class="card blue">
+            <a class="logo">
+              <img src="/assets/img/logo-2.svg" alt="logo">
+            </a>
+            <div class="titleBlock">
+              <h3>
+                Косметологический 
+              </h3>
+              <span>сервис</span>
+            </div>
+            <ul class="services">
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+            </ul>
+            <div class="btnBox">
+              <div class="btn">
+                все услуги
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="slide ">
+          <div class="page" style="background: url('/assets/img/service2.png');">
+            <div class="cover"></div>
+          </div>
+          <div class="card red">
+            <a class="logo">
+              <img src="/assets/img/logo-2.svg" alt="logo">
+            </a>
+            <div class="titleBlock">
+              <h3>
+                Косметологический 
+              </h3>
+              <span>сервис</span>
+            </div>
+            <ul class="services">
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+            </ul>
+            <div class="btnBox">
+              <div class="btn">
+                все услуги
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="slide reverse">
+          <div class="page" style="background: url('/assets/img/service3.png');">
+            <div class="cover"></div>
+          </div>
+          <div class="card orange">
+            <a class="logo">
+              <img src="/assets/img/logo-2.svg" alt="logo">
+            </a>
+            <div class="titleBlock">
+              <h3>
+                Косметологический 
+              </h3>
+              <span>сервис</span>
+            </div>
+            <ul class="services">
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+            </ul>
+            <div class="btnBox">
+              <div class="btn">
+                все услуги
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="slide ">
+          <div class="page" style="background: url('/assets/img/service.png');">
+            <div class="cover"></div>
+          </div>
+          <div class="card blue">
+            <a class="logo">
+              <img src="/assets/img/logo-2.svg" alt="logo">
+            </a>
+            <div class="titleBlock">
+              <h3>
+                Косметологический 
+              </h3>
+              <span>сервис</span>
+            </div>
+            <ul class="services">
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+            </ul>
+            <div class="btnBox">
+              <div class="btn">
+                все услуги
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="slide reverse">
+          <div class="page" style="background: url('/assets/img/service2.png');">
+            <div class="cover"></div>
+          </div>
+          <div class="card red">
+            <a class="logo">
+              <img src="/assets/img/logo-2.svg" alt="logo">
+            </a>
+            <div class="titleBlock">
+              <h3>
+                Косметологический 
+              </h3>
+              <span>сервис</span>
+            </div>
+            <ul class="services">
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+            </ul>
+            <div class="btnBox">
+              <div class="btn">
+                все услуги
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="slide ">
+          <div class="page" style="background: url('/assets/img/service.png');">
+            <div class="cover"></div>
+          </div>
+          <div class="card orange">
+            <a class="logo">
+              <img src="/assets/img/logo-2.svg" alt="logo">
+            </a>
+            <div class="titleBlock">
+              <h3>
+                Косметологический 
+              </h3>
+              <span>сервис</span>
+            </div>
+            <ul class="services">
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+            </ul>
+            <div class="btnBox">
+              <div class="btn">
+                все услуги
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="slide reverse">
+          <div class="page" style="background: url('/assets/img/service2.png');">
+            <div class="cover"></div>
+          </div>
+          <div class="card blue">
+            <a class="logo">
+              <img src="/assets/img/logo-2.svg" alt="logo">
+            </a>
+            <div class="titleBlock">
+              <h3>
+                Косметологический 
+              </h3>
+              <span>сервис</span>
+            </div>
+            <ul class="services">
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+              <li>
+                Ключевая услуга #1 - <span>
+                  8500
+                  <i class="fa fa-rub" aria-hidden="true"></i>
+                </span>
+              </li>
+            </ul>
+            <div class="btnBox">
+              <div class="btn">
+                все услуги
+              </div>
+            </div>
+          </div>
+        </li>
+        
+      </ul>
+    </section>
+
+    <section class="kingSection inverse overlay">
+      <div class="cover"></div>
+        <div class="wrapper">
+          <div class="col1 informationBlock">
+            <h3>
+              королевский <span>салон</span>
+            </h3>
+            <div class="description">
+              <p>
+                <strong>S&Mitler</strong> встречает своих посетителей современным дизайном и атмосферой уюта: огромное светлое пространство, изящная мебель, мягкие бархатные кресла. Это отличное место для того, чтобы посвятить пару часов только себе!
+              </p>
+              <p>
+                Дамам здесь предложат экстраординарный ассортимент косметологических процедур и качественный нейл-сервис, а мужчин порадуют услугами стилистов и уходом за лицом.
+              </p>
+            </div>
+          </div>
+          <div class="col2">
+            <div class="sectionGallery fotorama" data-nav='thumbs' data-thumbwidth="110" data-width="100%" data-thumbheights="60" data-thumborderwidth='5'>
+              <img src="/assets/img/photos/small/foto-13.jpg" alt="">
+        
+              <img src="/assets/img/photos/small/foto-15.jpg" alt="">
+              <img src="/assets/img/photos/small/foto-16.jpg" alt="">
+              
+              <img src="/assets/img/photos/small/foto-18.jpg" alt="">
+              <img src="/assets/img/photos/small/foto-19.jpg" alt="">
+              <img src="/assets/img/photos/small/foto-23.jpg" alt="">
+            </div>
+          </div>
+      </div>
+    </section>
+
   </body>
 </html>

@@ -1,0 +1,4 @@
+@mixin addFont ($type, $weight) {
+    font-family: $type;
+    font-weight: $weight;
+}

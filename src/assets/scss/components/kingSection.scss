@@ -1,0 +1,57 @@
+.kingSection{
+    background: url('/assets/img/photos/foto-16.jpg');
+    font-size: .6rem;
+    padding: 5% 0;
+
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+
+    .col1{
+        width: 40%
+    }
+
+    .col2{
+        width: 50%;
+
+        .fotorama{
+
+            &__nav-wrap{
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                width: 100%;
+                padding: 0 30px;
+
+                .fotorama__thumb{
+                    border: 5px solid #fff;
+                    transition: .2 ease-in;
+
+                    &-border{
+                        border-color:  darken($color: $active-color, $amount: 60);
+                    }
+                }
+            }
+        }
+    }
+
+
+    .informationBlock{
+        z-index: 1000;
+
+        h3{
+            font-size: 1.3em;
+
+            span{
+                color: $active-color;
+            }
+        }
+
+        p{
+            font-size: .8em;
+        }
+    }
+
+}

@@ -1,3 +1,133 @@
+@import './fonts'; 
+@import './vars'; 
+@import './mixins/+font.scss';
+@import './libs';
+
+@import './mixins/adaptiveFont.scss';
+
 *{
+    -webkit-tap-highlight-color: transparent;
+}
+
+html{
+    @include adaptiv-font(40, 30);
+}
+
+body{
+    @include addFont($type: $defaulte-font, $weight: 400);
     background-color: #000;
 }
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+h1, h2, h3{
+    text-transform: uppercase;
+}
+
+li{
+    list-style: none;
+}
+
+header, section{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center !important;
+}
+
+section{
+    position: relative;
+}
+
+
+section.inverse{
+    color: #fff;
+}
+
+p{
+    line-height: 1.75;
+}
+
+section.overlay{
+    position: relative;
+
+    &::before{
+        background-color: $over;
+        width: 100%;
+        height: 100%;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .92;
+    }
+
+    .wrapper{
+        position: relative;
+    }
+}
+
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav{
+    width: 30%;
+    min-width: 200px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    z-index: 1;
+    font-size: .8rem;
+
+    ul{
+        width: 100%;
+        padding-left: 10%;
+        li{
+            margin-top: 20px;
+            cursor: pointer;
+
+            &:hover > a{
+                color: $active-color;
+            }
+
+            &:hover > a::before{
+                color: $active-color;
+            }
+
+            &:first-child{
+                margin-top: 0;
+            }
+
+            a{
+                color: darken($color: #fff, $amount: 40%);
+                &::before{
+                    content: '\f219';
+                    font-family: fontawesome;
+                    color: #fff;
+                    margin-right: 10px;
+                }
+            }
+
+            font-size: .350rem;
+        }
+    }
+}
+
+
+@import './components/header.scss';
+@import './components/ui/button.scss';
+@import './components/services.scss';
+@import './components/kingSection.scss';
+
+@import './media.scss'
